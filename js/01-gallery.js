@@ -41,8 +41,12 @@ function onItemClick(evt) {
             >
             `,
         {
-            onShow: () => document.addEventListener('keydown', closeOriginalItemEsc),
-            onClose: () => document.removeEventListener('keydown', closeOriginalItemEsc),
+            onShow: () => {
+                document.addEventListener('keydown', closeOriginalItemEsc)
+            },
+            onClose: () => {
+                document.removeEventListener('keydown', closeOriginalItemEsc)
+            },
         });
     
     instance.show();
